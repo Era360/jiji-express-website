@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="sw">
+  <!-- Default language Swahili -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JJI Express - Safari za uhakika na starehe kote nchini. Weka tiketi yako sasa."
+    />
+    <title>JJI Express - Nyumbani</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/icon.png" alt="JJI Express Logo" />
+          <img src="images/logo.png" alt="JJI Express Logo" />
+        </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <ul id="primary-navigation" data-visible="false">
+          <li><a href="#home" aria-label="Nyumbani">Nyumbani</a></li>
+          <li><a href="#about" aria-label="Kuhusu Sisi">Kuhusu Sisi</a></li>
+          <li><a href="#routes" aria-label="Njia">Njia</a></li>
+          <li><a href="#services" aria-label="Huduma Zetu">Huduma Zetu</a></li>
+          <li>
+            <a href="#contact" aria-label="Wasiliana Nasi">Wasiliana Nasi</a>
+          </li>
+        </ul>
+
+        <div class="language-switcher">
+          <select id="languageSelector" aria-label="Chagua Lugha">
+            <option value="sw" selected>Kiswahili (SW)</option>
+            <option value="en">English (EN)</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-labelledby="heroHeading">
+        <div class="hero-content">
+          <h1 id="heroHeading">Safari za uhakika na starehe kote nchini</h1>
+          <p>
+            Weka tiketi yako sasa na ufurahie safari salama na yenye starehe
+            kuelekea unakoenda.
+          </p>
+          <form
+            id="bookingForm"
+            aria-labelledby="bookingFormHeading"
+            class="search-form"
+          >
+            <h2 id="bookingFormHeading" class="sr-only">
+              Fomu ya Kuhifadhi Tiketi
+            </h2>
+            <div class="form-row">
+              <div class="form-group location-select">
+                <select
+                  id="fromLocation"
+                  name="fromLocation"
+                  required
+                  aria-required="true"
+                  aria-label="Kutoka"
+                >
+                  <option value="" disabled selected>Kutoka</option>
+                  <!-- Options will be populated by JS -->
+                </select>
+              </div>
+              <div class="form-group location-select">
+                <select
+                  id="toLocation"
+                  name="toLocation"
+                  required
+                  aria-required="true"
+                  aria-label="Kwenda"
+                >
+                  <option value="" disabled selected>Kwenda</option>
+                  <!-- Options will be populated by JS -->
+                </select>
+              </div>
+              <div class="form-group date-select">
+                <input
+                  type="date"
+                  id="departureDate"
+                  name="departureDate"
+                  required
+                  aria-required="true"
+                  aria-label="Chagua Tarehe"
+                />
+              </div>
+              <button type="submit" class="btn-search">
+                Tafuta Safari <span aria-hidden="true">🔍</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="hero-image">
+          <!-- User needs to add image: images/bus_hero.png -->
+          <img
+            src="images/bus_hero.png"
+            alt="Basi la JJI Express likisafiri barabarani"
+          />
+        </div>
+      </section>
+
+      <section id="amenities" aria-labelledby="amenitiesHeading">
+        <h2 id="amenitiesHeading">Huduma Ndani ya Basi</h2>
+        <div class="amenity-cards">
+          <div class="card">
+            <!-- User needs to add icon: images/icon_seats.png -->
+            <img src="images/icon_seat.svg" alt="" aria-hidden="true" />
+            <h3>Viti vya Kifahari</h3>
+            <p>
+              Safiri kwa starehe ukitumia viti vyenye nafasi ya kutosha na
+              faraja isiyo na kifani.
+            </p>
+          </div>
+          <div class="card">
+            <!-- User needs to add icon: images/icon_ac.png -->
+            <img src="images/icon_ac.svg" alt="" aria-hidden="true" />
+            <h3>Kipoza Hewa (AC)</h3>
+            <p>
+              Furahia safari yako na mfumo wa kiyoyozi unaokupa hewa safi na
+              baridi safari nzima.
+            </p>
+          </div>
+          <div class="card">
+            <!-- User needs to add icon: images/icon_charger.png -->
+            <img src="images/icon_charger.svg" alt="" aria-hidden="true" />
+            <h3>Kituo cha Kuchaji</h3>
+            <p>
+              Usiwe na wasiwasi simu yako ikizima njiani, utachaji vifaa vyako
+              vya kielektroniki.
+            </p>
+          </div>
+          <div class="card">
+            <!-- User needs to add icon: images/icon_restroom.png -->
+            <img src="images/icon_restroom.svg" alt="" aria-hidden="true" />
+            <h3>Kujisitiri</h3>
+            <p>
+              Tunathamini faragha yako kwa kukupa nafasi ya kujisitiri kwa
+              kutumia choo safi na salama.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="aboutUsHeading">
+        <h2 id="aboutUsHeading">Safari Zetu | Kuhusu JJI Express</h2>
+        <p>
+          Tangu 2005, Jiji Express ni vinara wa usafiri wa mabasi Tanzania.
+          Tunasifika kwa ubora na uhakika, tukisafiri kote nchini kwa mabasi
+          yetu zaidi ya 100, na tumejitolea kutoa huduma bora kwa abiria wetu.
+        </p>
+        <div
+          class="video-placeholder"
+          role="region"
+          aria-label="Video kuhusu JJI Express"
+        >
+          <!-- User needs to add image: images/bus_video_placeholder.png -->
+          <img src="images/bus_hero.png" alt="Video kuhusu JJI Express" />
+          <button class="play-button" aria-label="Cheza Video">
+            <span aria-hidden="true">▶</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="routes" aria-labelledby="routesHeading">
+        <h2 id="routesHeading">Njia</h2>
+        <p>Popote ulipo tunafika</p>
+        <div class="routes-container">
+          <div class="gradient-overlay left"></div>
+          <div class="routes-wrapper">
+            <div class="routes-row">
+              <div class="route-card">
+                <img src="images/arusha.jpg" alt="Arusha" />
+                <h3>Arusha</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/bukoba.jpg" alt="Bukoba" />
+                <h3>Bukoba</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/dar.jpg" alt="Dar es Salaam" />
+                <h3>Dar es Salaam</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/iringa.jpeg" alt="Iringa" />
+                <h3>Iringa</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/mara.jpg" alt="Mara" />
+                <h3>Mara</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/mbeya.jpg" alt="Mbeya" />
+                <h3>Mbeya</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/moro.jpg" alt="Morogoro" />
+                <h3>Morogoro</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/moshi.jpg" alt="Moshi" />
+                <h3>Moshi</h3>
+              </div>
+              <!-- Additional cards to ensure overflow -->
+              <div class="route-card">
+                <img src="images/arusha.jpg" alt="Dodoma" />
+                <h3>Dodoma</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/bukoba.jpg" alt="Tanga" />
+                <h3>Tanga</h3>
+              </div>
+            </div>
+            <div class="routes-row">
+              <div class="route-card">
+                <img src="images/mbeya.jpg" alt="Kahama" />
+                <h3>Kahama</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/moro.jpg" alt="Kigoma" />
+                <h3>Kigoma</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/moshi.jpg" alt="Lindi" />
+                <h3>Lindi</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/arusha.jpg" alt="Tabora" />
+                <h3>Tabora</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/bukoba.jpg" alt="Mtwara" />
+                <h3>Mtwara</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/dar.jpg" alt="Mwanza" />
+                <h3>Mwanza</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/iringa.jpeg" alt="Njombe" />
+                <h3>Njombe</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/mara.jpg" alt="Songea" />
+                <h3>Songea</h3>
+              </div>
+              <!-- Additional cards to ensure overflow -->
+              <div class="route-card">
+                <img src="images/mbeya.jpg" alt="Shinyanga" />
+                <h3>Shinyanga</h3>
+              </div>
+              <div class="route-card">
+                <img src="images/moro.jpg" alt="Sumbawanga" />
+                <h3>Sumbawanga</h3>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-overlay right"></div>
+        </div>
+      </section>
+
+      <section id="services" aria-labelledby="ourServicesHeading">
+        <h2 id="ourServicesHeading">Huduma Zetu</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>Huduma Za Utoaji Mizigo</h3>
+            <p>
+              Fanya usafirishaji wa mizigo kuwa rahisi kwa kutumia huduma yetu
+              mpya ya utoaji! Madereva wetu wenye uzoefu na magari bora
+              huhakikisha mizigo yako inashughulikiwa kwa uangalifu na kufika
+              salama na kwa wakati.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Tenda</h3>
+            <p>
+              Unahitaji basi kwa tukio maalum au safari ya kundi? Kampuni yetu
+              ya mabasi ya miji hutoa huduma ya kukodisha basi kwa mahitaji yako
+              yote ya usafiri.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Huduma Za Mizigo</h3>
+            <p>
+              Safiri kwa urahisi na acha kazi ngumu kwetu! Huduma yetu ya
+              usafirishaji wa mizigo huhakikisha mali zako zinahamishwa kwa
+              usalama na kwa ufanisi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contactUsHeading">
+        <h2 id="contactUsHeading">Wasiliana Nasi</h2>
+        <div class="contact-info">
+          <div class="address">
+            <!-- User needs to add icon: images/icon_location.png -->
+            <img src="images/icon_location.png" alt="" aria-hidden="true" />
+            <h3>Address:</h3>
+            <p>
+              SILVER LAKE, Tanzania<br />1941 Late Avenue<br />Zip Code/Postal
+              code: 03875
+            </p>
+          </div>
+          <div class="email-contact">
+            <!-- User needs to add icon: images/icon_email.png -->
+            <img src="images/icon_email.png" alt="" aria-hidden="true" />
+            <h3>Contact us:</h3>
+            <p>
+              Email us for general queries, including Design and partnership
+              opportunities.
+            </p>
+            <a href="mailto:hello@company.com">hello@company.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- User needs to add logo: images/jji_express_logo_footer.png -->
+      <div class="logo">
+        <img src="images/icon.png" alt="JJI Express Logo" />
+        <img
+          src="images/logo.png"
+          alt="JJI Express Logo"
+          style="height: 20px"
+        />
+      </div>
+      <p>
+        &copy; <span id="currentYear">2025</span> JIJI Express, Tanzania. Haki
+        zote zimehifadhiwa.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
